@@ -9,8 +9,8 @@ export class MoviesController {
   }
 
   @Get("/:id")
-  getOne(){
-      return 'This will return one Movie';
+  getOne(@Param("id") id: String){
+      return `This will return one Movie the id: ${id}`;
   }
 
 
