@@ -15,4 +15,30 @@ describe('MoviesService', () => {
   it('should be defined', () => {
     expect(service).toBeDefined();
   });
+
+  describe("getAll(),", () => {
+
+    it("배열타입을 반환 해야함", () => {
+      const result = service.getAll();
+      expect(result).toBeInstanceOf(Array)
+    })
+
+  })
+
+  describe("getOne()", () => {
+
+    it("should return a movie", () => {
+      service.create({
+        title: 'TestMovie',
+        genres: ['teest'],
+        year: 2000,
+      });
+      const movie = service.getOne(1);
+      expect(movie).toBeDefined();
+    })
+
+  })
+
+  
+
 });

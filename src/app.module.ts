@@ -5,7 +5,7 @@ import { MoviesModule } from './movies/movies.module';
 
 @Module({
   imports: [MoviesModule],
-  controllers: [MoviesController],
-  providers: [MoviesService],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
